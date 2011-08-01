@@ -1,6 +1,6 @@
 #!/bin/sh
-if [ ! -f "$WORKSPACE/cloned-stamp" ]; then
-	cd "$WORKSPACE/clonedir"
+if [ ! -f "$CLONEDSTAMP" ]; then
+	cd "$CLONEDIR"
 	$SVN2GIT --verbose --no-minimize-url --metadata $@ && \
-		touch "$WORKSPACE/cloned-stamp"
+		touch "$CLONEDSTAMP"
 fi

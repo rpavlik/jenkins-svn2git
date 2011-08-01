@@ -1,5 +1,5 @@
 #!/bin/sh
-cd "$WORKSPACE/clonedir"
+cd "$CLONEDIR"
 $SVN2GIT --verbose --metadata --rebase
 if [ "x$GITREMOTE" != "x" ]; then
 	git push --mirror $GITREMOTE

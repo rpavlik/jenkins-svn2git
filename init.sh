@@ -3,6 +3,8 @@ if [ ! -d "$CLONEDIR" ]; then
 	mkdir -p "$CLONEDIR"
 	cd "$CLONEDIR"
 	git init
-	git config svn.followparent false
+	if [ "x$NOMINIMIZEURL" != "x" ]; then
+		git config svn.followparent false
+	fi
 	$WORKSPACE/clone.sh $@
 fi
